@@ -1,11 +1,10 @@
-#дз на 14.02.25
-def f(n, trust):
-    in_degree = [0] * (n + 1)
-    out_degree = [0] * (n + 1)
-    for a, b in trust:
-        out_degree[a] += 1
-        in_degree[b] += 1
-    for i in range(1, n + 1):
-        if out_degree[i] == 0 and in_degree[i] == n - 1:
-            return i
-    return -1
+n = int(input())
+trust = [[1,3], [2,3]]
+outin = [[0,0] for i in range(n)]
+for i in trust:
+    outin [i[0]-1][0]+=1
+    outin [i[1]-1][1]+=1
+index = -1
+if [0,n-1] in outin:
+    index = outin.index([0,n-1])+1
+print(index)
